@@ -12,16 +12,6 @@ Easy way to interact with the user through the command line.
 ```js
 var CommandAsker = require('command-asker');
 
-var isAdult = function(value) {
-    if (value < 18) {
-        return when.reject({
-            'name'      : 'not_adult',
-            'message'   : 'you must be over 18 years'
-        });
-    }
-    return when.resolve();  
-};
-
 var a = new CommandAsker([
     { key: 'firstname', ask: 'what is your firstname ? ' },
     { key: 'lastname',  ask: 'what is your lastname ? ' },
@@ -32,6 +22,16 @@ a.ask(function(response) {
     console.log('My name is ' + response.firstname + ' ' + response.lastname + ' (' + response.age + ')');
     a.close();
 });
+
+var isAdult = function(value) {
+    if (value < 18) {
+        return when.reject({
+            'name'      : 'not_adult',
+            'message'   : 'you must be over 18 years'
+        });
+    }
+    return when.resolve();  
+};
 ```
 
 ```sh
@@ -44,10 +44,17 @@ My name is chuck norris (22)
 
 ### Validator 
 
-The validator is optional, but, you can pass one or more validators if you want.
-For work, a promise must be return from validator.
+The validator is optional, but, you can pass one or more validators.
+A promise must be return from validator, in the case of an error, the format should be the following:
 
-example
+```json
+{
+    'name'      : 'not_adult',
+    'message'   : 'you must be over 18 years'
+}
+```
+
+example of validator
 
 ```js
 var isAdult = function(value) {
