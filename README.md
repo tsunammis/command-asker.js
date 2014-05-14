@@ -3,6 +3,8 @@ command-asker
 
 Easy way to interact with the user through the command line.
 
+[![Build Status](https://travis-ci.org/tsunammis/command-asker.js.svg?branch=master)](https://travis-ci.org/tsunammis/command-asker.js)
+
 ## Installation
 
     $ npm install command-asker
