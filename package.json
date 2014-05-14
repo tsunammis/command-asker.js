@@ -30,7 +30,8 @@
     "when": "~3.1.0"
   },
   "devDependencies": {
-    "mocha": "latest"
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
   },
   "engines": {
     "node": ">= 0.10"
