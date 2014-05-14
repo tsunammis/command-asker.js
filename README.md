@@ -12,17 +12,23 @@ Easy way to interact with the user through the command line.
 ```js
 var CommandAsker = require('command-asker');
 
+// Init object and configure questions 
 var a = new CommandAsker([
     { key: 'firstname', ask: 'what is your firstname ? ' },
     { key: 'lastname',  ask: 'what is your lastname ? ' },
     { key: 'age',  ask: 'how old are you ? ', validators: [isAdult] }
 ]);
 
+// Launch the prompt command
 a.ask(function(response) {
-    console.log('My name is ' + response.firstname + ' ' + response.lastname + ' (' + response.age + ')');
+    console.log('My name is ' + response.firstname 
+            + ' ' + response.lastname + ' (' + response.age + ')');
+    
+    // Close the prompt command
     a.close();
 });
 
+// Validator
 var isAdult = function(value) {
     if (value < 18) {
         return when.reject({
