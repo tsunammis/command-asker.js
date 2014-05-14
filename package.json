@@ -1,0 +1,44 @@
+{
+  "name": "command-asker",
+  "description": "Easy way to interact with the user through the command line.",
+  "version": "0.1.0",
+  "homepage": "http://github.com/tsunammis/command-asker.js",
+  "keywords": [
+    "command",
+    "interactive",
+    "cli",
+    "ask"
+  ],
+  "author": {
+    "name": "Stan Chollet",
+    "email": "stanislas.chollet@gmail.com"
+  },
+  "main": "command-asker.js",
+  "bugs": {
+    "url": "http://github.com/tsunammis/command-asker.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tsunammis/command-asker.js.git"
+  },
+  "scripts": {
+    "test": "_mocha --reporter spec"
+  },
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "cli-color": "~0.3.2",
+    "when": "~3.1.0"
+  },
+  "devDependencies": {
+    "mocha": "latest"
+  },
+  "engines": {
+    "node": ">= 0.8"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/tsunammis/command-asker.js/LICENSE"
+    }
+  ]
+}
