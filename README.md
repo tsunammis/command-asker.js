@@ -17,7 +17,7 @@ var CommandAsker = require('command-asker');
 // Init object and configure questions 
 var a = new CommandAsker([
     { key: 'firstname', ask: 'what is your firstname ? ' },
-    { key: 'lastname',  ask: 'what is your lastname ? ' },
+    { key: 'lastname',  ask: 'what is your lastname ? ', optional: true },
     { key: 'age',  ask: 'how old are you ? ', validators: [isAdult] }
 ]);
 
@@ -74,6 +74,19 @@ var isAdult = function(value) {
     }
     return when.resolve();  
 };
+```
+
+### Optional
+
+You can set a question as optional, you have to specify the property "optional" with true.
+if the user leaves the field empty, then it will be ignored.
+
+```js
+var a = new CommandAsker([
+    // ...
+    { key: 'lastname',  ask: 'what is your lastname ? ', optional: true }
+    // ...
+]);
 ```
 
 ### Retrieve data 
