@@ -78,7 +78,10 @@ CommandAsker.prototype.askOne = function(questionNumber) {
         if (!_.has(question, 'validators')) {
             question.validators = [];
         }
-        
+	if (_.has(question, 'optional') && question.optional
+            && answer !== null) {
+            question.validators = [];
+        }        
         sequence(question.validators, answer).then(function() {
             asker.response[question.key] = answer;
             asker.nextStep();
