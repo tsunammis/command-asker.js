@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "cli-color": "~0.3.2",
+    "lodash": "^3.5.0",
     "object-assign": "^2.0.0",
-    "underscore": "~1.5.2",
     "when": "^3.7.2"
   },
   "devDependencies": {
