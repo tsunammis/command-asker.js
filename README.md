@@ -17,14 +17,13 @@ var CommandAsker = require('command-asker');
 // Init object and configure questions 
 var a = new CommandAsker([
     { key: 'firstname', ask: 'what is your firstname ? ' },
-    { key: 'lastname',  ask: 'what is your lastname ? ', optional: true },
+    { key: 'lastname',  ask: 'what is your lastname ? ', required: true },
     { key: 'age',  ask: 'how old are you ? ', validators: [isAdult] }
 ]);
 
 // Launch the prompt command
 a.ask(function(response) {
-    console.log('My name is ' + response.firstname 
-            + ' ' + response.lastname + ' (' + response.age + ')');
+    console.log('My name is ' + response.firstname + ' ' + response.lastname + ' (' + response.age + ')');
     
     // Close the prompt command
     a.close();
@@ -76,10 +75,10 @@ var isAdult = function(value) {
 };
 ```
 
-### Optional
+### Required
 
-You can set a question as optional, you have to specify the property "optional" with true.
-if the user leaves the field empty, then it will be ignored.
+You can set a question as required, you have to specify the property "required" with true.
+if the user specified an empty value, he will get an error.
 
 ```js
 var a = new CommandAsker([
