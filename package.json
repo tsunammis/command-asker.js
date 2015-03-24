@@ -1,7 +1,7 @@
 {
   "name": "command-asker",
   "description": "Easy way to interact with the user through the command line.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "http://github.com/tsunammis/command-asker.js",
   "keywords": [
     "command",
