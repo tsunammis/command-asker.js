@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var CommandAsker    = require('command-asker'),
+var CommandAsker    = require('../'),
     when            = require('when');
 
 var isAdult = function(value) {

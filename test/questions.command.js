@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var CommandAsker = require('command-asker');
+var CommandAsker = require('../');
 
 var a = new CommandAsker([
     { key: 'firstname', ask: 'firstname' },

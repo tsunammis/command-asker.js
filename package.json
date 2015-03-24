@@ -13,7 +13,7 @@
     "name": "Stan Chollet",
     "email": "stanislas.chollet@gmail.com"
   },
-  "main": "command-asker.js",
+  "main": "index.js",
   "bugs": {
     "url": "http://github.com/tsunammis/command-asker.js/issues"
   },
@@ -22,16 +22,17 @@
     "url": "http://github.com/tsunammis/command-asker.js.git"
   },
   "scripts": {
-    "test": "_mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha test/ --reporter spec"
   },
   "dependencies": {
-    "underscore": "~1.5.2",
     "cli-color": "~0.3.2",
-    "when": "~3.1.0"
+    "object-assign": "^2.0.0",
+    "underscore": "~1.5.2",
+    "when": "^3.7.2"
   },
   "devDependencies": {
-    "mocha": "~1.18.2",
-    "chai": "~1.9.1"
+    "chai": "^2.1.2",
+    "mocha": "^2.2.1"
   },
   "engines": {
     "node": ">= 0.10"
