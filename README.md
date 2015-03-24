@@ -57,8 +57,8 @@ A promise must be return from validator, in the case of an error, the format sho
 
 ```json
 {
-    'name'      : 'not_adult',
-    'message'   : 'you must be over 18 years'
+    name      : 'not_adult',
+    message   : 'you must be over 18 years'
 }
 ```
 
@@ -103,4 +103,4 @@ a.ask(function(response) {
 
 ## License
 
-[GPL v2](https://github.com/tsunammis/command-asker.js/blob/master/LICENSE).
+[MIT](https://github.com/tsunammis/command-asker.js/blob/master/LICENSE).
