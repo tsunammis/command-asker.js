@@ -4,6 +4,7 @@ command-asker
 Easy way to interact with the user through the command line.
 
 [![Build Status](https://travis-ci.org/tsunammis/command-asker.js.svg?branch=master)](https://travis-ci.org/tsunammis/command-asker.js)
+[![NPM Version](https://img.shields.io/npm/v/command-asker.svg?style=flat)](https://www.npmjs.org/package/command-asker)
 
 ## Installation
 
